@@ -7,8 +7,8 @@ An assortment of Kotlin extension functions.
 
 ## Examples
 
-### Collection.toggle
-Make a copy of a `Collection` that contains a new element
+### List.toggle
+Make a copy of a `List` that contains a new element
 or no longer contains that element dependent on whether it was
 part of the collection before.
 
@@ -19,8 +19,8 @@ list.toggle(2) // [1, 3]
 list.toggle(5) // [1, 2, 3, 5]
 ```
 
-### Collection.plusIfNotNull
-Make a copy of a `Collection` with an added element or return
+### List.plusIfNotNull
+Make a copy of a `List` with an added element or return
 the unmodified collection if the element to be added is null.
 
 ```kotlin
