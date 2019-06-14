@@ -34,7 +34,7 @@ list.plusIfNotNull(null) // [1, 2]
 ## Binaries
 ```gradle
 dependencies {
-    implementation "cc.femto:kotlin-extensions:0.1"
+    implementation "cc.femto:kotlin-extensions:0.2"
 }
 ```
 
