@@ -19,6 +19,17 @@ list.toggle(2) // [1, 3]
 list.toggle(5) // [1, 2, 3, 5]
 ```
 
+### Collection.plusIfNotNull
+Make a copy of a `Collection` with an added element or return
+the unmodified collection if the element to be added is null.
+
+```kotlin
+val list = listOf(1, 2)
+
+list.plusIfNotNull(3) // [1, 2, 3]
+list.plusIfNotNull(null) // [1, 2]
+```
+
 
 ## Binaries
 ```gradle

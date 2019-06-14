@@ -12,3 +12,15 @@ fun <E> Collection<E>.toggle(element: E) = when (element) {
     in this -> this - element
     else -> this + element
 }
+
+/**
+ * Make a copy of a [Collection] with an added element or return
+ * the unmodified collection if the element to be added is null.
+ *
+ * @param element that will be added to the collection if it is not null
+ * @return copy of the collection with added non-null element or unmodified collection
+ */
+fun <E> Collection<E>.plusIfNotNull(element: E?) = when (element) {
+    null -> this
+    else -> this + element
+}

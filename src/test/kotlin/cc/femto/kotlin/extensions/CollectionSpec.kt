@@ -23,4 +23,23 @@ class CollectionSpec : Spek({
             }
         }
     }
+
+    describe("plusIfNotNull") {
+        context("element is null") {
+            it("returns unmodified collection") {
+                assertEquals(
+                    expected = listOf(1, 2, 3),
+                    actual = listOf(1, 2, 3).plusIfNotNull(null)
+                )
+            }
+        }
+        context("element is not null") {
+            it("returns new collection with added element") {
+                assertEquals(
+                    expected = listOf(1, 2, 3),
+                    actual = listOf(1, 2).plusIfNotNull(3)
+                )
+            }
+        }
+    }
 })
