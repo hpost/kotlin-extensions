@@ -24,3 +24,18 @@ fun <E> List<E>.plusIfNotNull(element: E?) = when (element) {
     null -> this
     else -> this + element
 }
+
+/**
+ * Make a copy of a [List] replace elements that match a predicate
+ * with a provided element.
+ *
+ * @param element that will replace elements that match [shouldReplace] in the collection
+ * @param shouldReplace predicate that determines whether an element should be replaced
+ * @return copy of the collection with matching elements replaced with [element]
+ */
+fun <E> List<E>.replaceWith(element: E, shouldReplace: (E) -> Boolean) = this.map {
+    when (shouldReplace(it)) {
+        true -> element
+        else -> it
+    }
+}

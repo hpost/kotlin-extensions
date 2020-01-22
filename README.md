@@ -31,10 +31,21 @@ list.plusIfNotNull(null) // [1, 2]
 ```
 
 
+### List.replaceWith
+Make a copy of a `List` replace elements that match a predicate
+with a provided element.
+
+```kotlin
+val list = listOf(1, 2, 3, 4)
+
+list.replaceWith(0) { it % 2 == 0 } // [1, 0, 3, 0]
+```
+
+
 ## Binaries
 ```gradle
 dependencies {
-    implementation "cc.femto:kotlin-extensions:0.2"
+    implementation "cc.femto:kotlin-extensions:0.3"
 }
 ```
 

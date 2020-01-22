@@ -42,4 +42,13 @@ class ListSpec : Spek({
             }
         }
     }
+
+    describe("replaceWith") {
+        it("replaces elements that match the predicate") {
+            assertEquals(
+                expected = listOf(1, 0, 3, 0),
+                actual = listOf(1, 2, 3, 4).replaceWith(0) { it % 2 == 0 }
+            )
+        }
+    }
 })
